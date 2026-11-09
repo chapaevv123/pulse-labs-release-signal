@@ -1,0 +1,6 @@
+# Future deployment example only. Replace the domain after separate owner approval.
+# DNS must point to the host; Caddy must be able to use ports 80 and 443.
+api.example.com {
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:8402
+}

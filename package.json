@@ -1,0 +1,16 @@
+{
+  "name": "pulse-labs-release-signal",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test",
+    "lint": "node --check server.js && node --check src/app.js && node --check src/github.js && node --check src/signal.js && node --check test/app.test.js && node --check tools/local-preflight.js && node --check tools/public-preflight.js"
+  },
+  "dependencies": {
+    "@x402/core": "^2.30.0",
+    "@x402/evm": "^2.30.0",
+    "@x402/express": "2.30.0",
+    "express": "4.22.3"
+  }
+}

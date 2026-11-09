@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: pulse-labs-release-signal
+    runtime: node
+    plan: free
+    autoDeployTrigger: "off"
+    buildCommand: npm ci --omit=dev
+    startCommand: npm start
+    healthCheckPath: /ready
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: X402_ENABLE_PAYMENTS
+        value: "1"
+      - key: X402_PRICE
+        value: "$0.005"
+      - key: X402_PAY_TO
+        sync: false
